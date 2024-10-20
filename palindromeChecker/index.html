@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="palindrome.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="overlay">
+        <p class="header__banner">Simple</p>
+        <h1 id="palindrome-checker" class="header__title">
+          Palindrome Checker
+        </h1>
+      </div>
+    </header>
+    <main class="content" role="main">
+      <h2 id="check-your-word" class="content__caption">Check Your Word!</h2>
+      <button id="openModalBtn" class="button">Check a Word</button>
+      <p id="result" class="result"></p>
+
+      <div id="modal" class="modal">
+        <div class="modal__container">
+          <h2 class="modal__title">Enter a Word then click 'Submit'</h2>
+          <input
+            type="text"
+            id="wordInput"
+            class="modal__input"
+            placeholder="Type here!"
+            required
+          />
+          <button id="submitBtn" class="modal__button modal__button_submit">
+            Submit
+          </button>
+          <button id="closeModalBtn" class="modal__button modal__button_close">
+            &times;
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">by Darnell Valerio</footer>
+
+    <script src="palindrome.js"></script>
+  </body>
+</html>
