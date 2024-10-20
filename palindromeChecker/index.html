@@ -16,23 +16,33 @@
       </div>
     </header>
     <main class="content" role="main">
-      <h2 id="check-your-word" class="content__caption">Check Your Word!</h2>
-      <button id="openModalBtn" class="button">Check a Word</button>
       <p id="result" class="result"></p>
+      <h2 id="check-your-word" class="content__caption">Check Your Word!</h2>
+      <button id="openModalBtn" class="button">CLICK HERE</button>
 
       <div id="modal" class="modal">
         <div class="modal__container">
           <h2 class="modal__title">Enter a Word then click 'Submit'</h2>
-          <input
-            type="text"
-            id="wordInput"
-            class="modal__input"
-            placeholder="Type here!"
-            required
-          />
-          <button id="submitBtn" class="modal__button modal__button_submit">
-            Submit
-          </button>
+          <form id="palindromeForm">
+            <input
+              type="text"
+              id="wordInput"
+              class="modal__input"
+              placeholder="Type here (min 2 characters)"
+              required
+              pattern="^[a-zA-Z]{2,}$"
+              minlength="2"
+            />
+            <p id="errorMessage" class="error-message"></p>
+            <button
+              id="submitBtn"
+              class="modal__button modal__button_submit"
+              type="submit"
+              disabled
+            >
+              Submit
+            </button>
+          </form>
           <button id="closeModalBtn" class="modal__button modal__button_close">
             &times;
           </button>
